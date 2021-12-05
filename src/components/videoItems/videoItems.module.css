@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 5rem;
+    background:#ffffff;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1rem 0 0 1rem;
+}
+
+@media screen and (max-width: 700px){
+    .items{
+        flex-direction: column;
+    }
+}

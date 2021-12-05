@@ -1,0 +1,98 @@
+nav{
+    position: fixed;
+    top: 0;
+    width:100%;
+    display: flex;
+    background: #ffffff;
+    justify-content: space-between;
+    border-bottom: 1px solid #e9e8e8;
+    padding: 0.8rem 0 0.8rem 0.3rem;
+    margin-bottom: 0;
+    z-index: 1
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logoImg{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 5px;
+}
+.logoName{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+
+.pageGo{
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    padding: 0.7rem 1.5rem;
+    margin-right: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #dc555c;
+    color: white;
+    transition: background 200ms ease-in;
+    cursor:pointer;
+    animation: ani 1000ms alternate infinite;
+}
+.pageGo:hover{
+    background: #dc143c;
+}
+.button{
+    cursor: pointer;
+    background: transparent;
+    outline:0;
+    border:none;
+    font-size: 2.3rem;
+    color: #d3d3d3;
+    margin:0.2rem 0.8rem 0 0;
+}
+
+@keyframes ani {
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+.button:hover{
+    color: #b9b8b8;
+    transform: scale(1.03);
+}
+
+
+@media screen and (max-width: 507px){
+    .pageGo{
+        font-size: 0.2rem;
+        padding: 0.5rem 1.1rem;
+    }
+    .logoName{
+        font-size: 1rem;
+    }
+    .logoImg{
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .logoName{
+        font-size: 0.7rem;
+    }
+    .logoImg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

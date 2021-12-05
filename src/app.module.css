@@ -1,0 +1,27 @@
+.container{
+  background: #ffffff;
+}
+.content{
+  display: flex;
+}
+.list{
+  flex-basis: 20%;  
+}
+
+.items{
+  flex-basis: 80%;
+}
+.paint{
+  color: #dc143c;
+  font-weight: bold;
+  border-left: 5px solid #dc143c;
+}
+
+@media screen and (max-width: 500px) {
+  .list{
+    flex-basis: 15%;  
+  }
+  .items{
+    flex-basis: 80%;
+  }
+}
