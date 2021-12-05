@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-What-should-I-do/static/css/main.e8ffed56.chunk.css",
+    "main.js": "/react-What-should-I-do/static/js/main.345448e8.chunk.js",
+    "main.js.map": "/react-What-should-I-do/static/js/main.345448e8.chunk.js.map",
+    "runtime-main.js": "/react-What-should-I-do/static/js/runtime-main.8e35f92f.js",
+    "runtime-main.js.map": "/react-What-should-I-do/static/js/runtime-main.8e35f92f.js.map",
+    "static/js/2.e633c141.chunk.js": "/react-What-should-I-do/static/js/2.e633c141.chunk.js",
+    "static/js/2.e633c141.chunk.js.map": "/react-What-should-I-do/static/js/2.e633c141.chunk.js.map",
+    "index.html": "/react-What-should-I-do/index.html",
+    "static/css/main.e8ffed56.chunk.css.map": "/react-What-should-I-do/static/css/main.e8ffed56.chunk.css.map",
+    "static/js/2.e633c141.chunk.js.LICENSE.txt": "/react-What-should-I-do/static/js/2.e633c141.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e35f92f.js",
+    "static/js/2.e633c141.chunk.js",
+    "static/css/main.e8ffed56.chunk.css",
+    "static/js/main.345448e8.chunk.js"
+  ]
+}
