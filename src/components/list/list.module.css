@@ -8,12 +8,12 @@ ul{
     border-right: 1px solid #e9e6e6;
     flex-direction: column;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    height: auto;
+    height: 100vh;
     margin: 0;
     text-align: center;
     background: #ffffff;
     color: #535353;
-    top: 200px;
+    top: 72px;
     position: fixed;
     left: 1px;
     width: 20%;
@@ -25,9 +25,9 @@ ul{
 }
 .paint,
 .listItem:hover{
-    color: #dc143c;
+    color: #b00f6f;
     font-weight: bold;
-    border-left: 5px solid #dc143c;
+    background: #b00f6f1c;
 }
 .remove{
     color: #535353;
@@ -35,11 +35,10 @@ ul{
     border-left: 1px solid #dbdbdb;
 }
 
-@media screen and (max-width: 615px ){
+@media screen and (max-width: 38.4375em ){
     .list{
         width: 15%;
         font-size: 0.6rem;
-        top: 100px;
     }
     .listItem{
         padding: 17px;

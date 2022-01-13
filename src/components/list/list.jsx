@@ -1,22 +1,59 @@
-import React,{memo} from 'react';
+import React,{memo,useRef} from 'react';
 import styles from './list.module.css';
 
-const List = memo(({onSearch, onTarget}) => {
+const List = memo(({onSearch, onTarget, handleUrl}) => {
+    const lists = [
+        {
+            id: 1,
+            username: '드림코딩',
+            url: 'https://academy.dream-coding.com/'
+        },
+        {
+            id: 2,
+            username: '생활코딩',
+            url: 'https://opentutorials.org/course/1'
+        },
+        {
+            id: 3,
+            username: '제로초',
+            url: 'https://www.zerocho.com/'
+        },
+        {
+            id: 4,
+            username: '코딩애플',
+            url: 'https://codingapple.com/'
+        },
+        {
+            id: 5,
+            username: '노마드코더',
+            url: 'https://nomadcoders.co/'
+        },
+        {
+            id: 6,
+            username: '조코딩',
+            url: 'https://developerdk.tistory.com/'
+        }
+    ]
     const onClick = (e) => {
         const target = e.target;
+        const url = e.target.dataset.url;
+        handleUrl(url);
         onSearch(target.innerHTML);
         onTarget(target);  
-    }   
+        navFocus(target);
+    }  
+    const navRef = useRef([]);
+    let selected = navRef.current[0];
+    const navFocus = (target) =>{
+        navRef.current.forEach(list => list.classList.remove(styles.paint));
+        selected = target;
+        selected.classList.add(styles.paint);
+    }
 
     return(
-            <ul className={`${styles.list} `}>
-                <li className={styles.listItem} onClick={onClick}>드림코딩</li>
-                <li className={styles.listItem} onClick={onClick}>생활코딩</li>
-                <li className={styles.listItem} onClick={onClick}>제로초</li>
-                <li className={styles.listItem} onClick={onClick}>코딩애플</li>
-                <li className={styles.listItem} onClick={onClick}>노마드코더</li>
-                <li className={styles.listItem} onClick={onClick}>조코딩</li>
-            </ul>
+        <ul className={`${styles.list} `}>
+            {lists.map(list => <li ref={el => (navRef.current[list.id -1] = el)} key={list.id} onClick={onClick} data-url={list.url}className={styles.listItem}>{list.username}</li>)}
+        </ul>
     )          
 });
 

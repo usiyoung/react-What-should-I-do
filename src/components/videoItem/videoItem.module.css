@@ -28,13 +28,16 @@
     color: #8a8a8a
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 50.6em){
     .container{
         width: 96%;
     }
+    .title{
+        font-size: 0.6rem;
+    }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 26em){
     .img{
         width: 100%;
     }

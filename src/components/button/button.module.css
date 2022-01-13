@@ -1,0 +1,33 @@
+.pageGo{
+    outline: none;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    background: #b1086d;
+    color: white;
+    transition: background 200ms ease-in;
+    cursor:pointer;
+    animation: ani 600ms alternate infinite;
+}
+.pageGo:hover{
+    background: #b00f6fc2;
+}
+
+@media screen and (max-width : 50.6em){
+    .pageGo{
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width : 25.9em){
+    .pageGo{
+         font-size: 0.3rem;
+         background: transparent;
+         color: #b1086d;
+         padding: 1em;
+    }
+}
