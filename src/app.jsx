@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import List from './components/list/list';
 import Nav from './components/nav/nav';
 import VideoItems from './components/videoItems/videoItems';
 import styles from './app.module.css';
-import { useRef } from 'react/cjs/react.development';
 
 
 
