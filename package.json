@@ -2,7 +2,7 @@
   "name": "template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://usiyoung.github.io/react-What-should-I-do/",
+  "homepage": "",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
