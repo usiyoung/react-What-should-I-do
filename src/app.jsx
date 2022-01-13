@@ -6,15 +6,21 @@ import styles from './app.module.css';
 import { useRef } from 'react/cjs/react.development';
 
 
+
 function App({youtube}) {
   const [videos, setVideos] = useState([]);
   const [selectedList, setSelectedList] = useState('');
-  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState('');
+  const [selectedItemUrl, setSelectedItemUrl] = useState('');
   const containerRef = useRef();
 
   const handleList = (target) => {
     setSelectedList(target.innerHTML);  
     containerRef.current.scrollIntoView({behavior : 'smooth'});
+  }
+
+  const handleUrl = (url) =>{
+    setSelectedItemUrl(url);
   }
 
   const handleVideo = (video) =>{
@@ -25,24 +31,30 @@ function App({youtube}) {
   const search = query =>{
     youtube
     .search(query)//
-    .then(items => setVideos(items));
+    .then(items => setVideos(items))
+    .then(setSelectedVideo(''));
   };
 
   useEffect(() => {
     youtube
     .search('드림코딩')//
     .then(video => setVideos(video));
-  },[youtube,containerRef]);
+    setSelectedList('드림코딩');
+    setSelectedItemUrl('https://academy.dream-coding.com/');
+    
+  },[youtube]);
 
   return (
     <div ref={containerRef} className={styles.container}>
         <Nav 
+          onSearch={search} 
+          selectedItemUrl={selectedItemUrl}
           selectedList={selectedList} 
-          selectedVideo={selectedVideo}
           />
       <div className={styles.content}>
         <div className={styles.list}>
           <List
+          handleUrl = {handleUrl}
             selectedList={selectedList} 
             onSearch={search} 
             onTarget={handleList} 
@@ -54,6 +66,7 @@ function App({youtube}) {
             selectedVideo={selectedVideo}
             onClickVideo={handleVideo}
           />
+
         </div>
       </div>
     </div>

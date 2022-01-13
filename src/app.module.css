@@ -1,8 +1,10 @@
 .container{
   background: #ffffff;
+  box-sizing: border-box;
 }
 .content{
   display: flex;
+  margin-top: 2em;
 }
 .list{
   flex-basis: 20%;  
@@ -11,13 +13,9 @@
 .items{
   flex-basis: 80%;
 }
-.paint{
-  color: #dc143c;
-  font-weight: bold;
-  border-left: 5px solid #dc143c;
-}
 
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 31.25em) {
   .list{
     flex-basis: 15%;  
   }
