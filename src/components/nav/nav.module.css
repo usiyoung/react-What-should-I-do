@@ -60,9 +60,15 @@ nav{
     outline:0;
     border:none;
     font-size: 2.1rem;
-    color: #b00f6f3d;
+    color: #dbdbdb;
     margin:0.2rem 0.8rem 0 0;
 }
+
+.button:hover{
+    color: #b00f6f;
+    transform: scale(1.03);
+}
+
 
 @keyframes ani {
     from{
@@ -73,10 +79,7 @@ nav{
     }
 }
 
-.button:hover{
-    color: #b00f6f;
-    transform: scale(1.03);
-}
+
 
 .right{
     display: flex;
