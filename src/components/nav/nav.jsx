@@ -1,10 +1,8 @@
 import React,{memo, useRef} from 'react';
 import styles from './nav.module.css';
 import '@fortawesome/fontawesome-free/js/all.js';
-import PageButton from '../button/button';
 
-
-const Nav = memo(({onSearch,selectedList,selectedItemUrl}) => {
+const Nav = memo(({onSearch}) => {
     const inputRef = useRef();
 
     const handleSearch = () =>{
@@ -32,11 +30,6 @@ const Nav = memo(({onSearch,selectedList,selectedItemUrl}) => {
         </div>
         
         <div className={styles.right}>
-            <PageButton 
-            selectedList={selectedList}
-            selectedItemUrl={selectedItemUrl}
-            className={styles.pageButton}
-            />
             <a href="https://github.com/usiyoung" target="_blank" rel="noopener noreferrer"><button className={styles.button}><i className="fab fa-github"></i></button>
             </a>
         </div>

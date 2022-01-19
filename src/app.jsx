@@ -47,8 +47,6 @@ function App({youtube}) {
     <div ref={containerRef} className={styles.container}>
         <Nav 
           onSearch={search} 
-          selectedItemUrl={selectedItemUrl}
-          selectedList={selectedList} 
           />
       <div className={styles.content}>
         <div className={styles.list}>
@@ -62,6 +60,8 @@ function App({youtube}) {
         <div className={styles.items}>
           <VideoItems 
             videos={videos} 
+            selectedItemUrl={selectedItemUrl}
+            selectedList={selectedList}
             selectedVideo={selectedVideo}
             onClickVideo={handleVideo}
           />

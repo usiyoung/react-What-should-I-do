@@ -80,13 +80,6 @@ nav{
 }
 
 
-
-.right{
-    display: flex;
-    align-items: center;
-}
-
-
 @media screen and (max-width: 50.6em){
 
     .logoName{
@@ -95,9 +88,6 @@ nav{
     .logoImg{
         width: 1.7rem;
         height: 1.7rem;
-    }
-    .right{
-        padding: 0.1em;
     }
 
     .inputBtn{
