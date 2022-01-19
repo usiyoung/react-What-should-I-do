@@ -40,6 +40,7 @@ nav{
     outline: none;
     width: 100%;
     background: #f7f7f7;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 1em;
     border-radius: 0.5em;
     text-align: center;
@@ -49,9 +50,13 @@ nav{
     border: none;
     cursor: pointer;
     margin-left: 1em;
-    border-radius: 0.6em;
+    border-radius: 1em;
     padding: 1em;
-
+    background: transparent;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    width: 3em;
+    height: 3em;
+    line-height: 1.4em;
 }
 
 .button{
@@ -92,7 +97,6 @@ nav{
 
     .inputBtn{
         margin-left:0.3em;
-        padding: 0.1em 0.77em;
     }
 
     .button{
