@@ -10,7 +10,7 @@ class Youtube {
 
     search(query){
         return(
-            fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&type=video&q=${query}&key=${this.key}`,this.requestOptions)
+            fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&type=video&q=${query}&key=${this.key}`,this.requestOptions)
             .then(response => response.json())
             .then(result => 
                 result.items.map(item => ({ ...item, id: item.id.videoId}))
