@@ -28,7 +28,7 @@
     color: #8a8a8a
 }
 
-@media screen and (max-width: 50.6em){
+@media screen and (max-width: 40.6em){
     .container{
         width: 96%;
     }
