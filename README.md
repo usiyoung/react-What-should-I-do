@@ -1,7 +1,7 @@
 # WHAT SHOULD I DO?
 🥎 coding study
 ## stack
-`React` `postcss` `youtube-api` `postman`
+`React` `postcss` `youtube-api` `postman` 
 
 ## learned
 
@@ -25,4 +25,9 @@
 - 이 프로젝트에는 youtube api 를 사용하고 있습니다. mvc 관점으로 봤을 때 api 의 정보들을 가져오는 서비스 로직들은 view와 분리해 관리해야 합니다. api 를 관리하는 코드를 service 파일에 넣어 관리 해주었습니다.
 - [MVC를 이해하기 위한 기술블로그 작성](https://usiyoung.github.io/2022/01/15/MVC/) 
 
+
+### 4. Axios
+
+- HTTP 비동기 통신을 fetch에서 브라우저 호환성이 높은 Axios로 변환했습니다.
+- [Axios를 이해하기 위한 기술블로그 작성](https://usiyoung.github.io/2022/02/07/Axios/)
 
