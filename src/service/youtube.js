@@ -1,17 +1,23 @@
+import axios from 'axios';
 class Youtube {
     constructor(key){
-        this.key = key;
-        this.requestOptions = {
-            method: 'GET',
-            redirect: 'follow'
-        };
+        this.client = axios.create({
+            baseURL : 'https://www.googleapis.com/youtube/v3',
+            params : {key : key}
+        })
         
     }
 
     async search(query){
-            const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&type=video&q=${query}&key=${this.key}`,this.requestOptions);
-            const result = await response.json();
-            return result.items.map(item => ({ ...item, id: item.id.videoId}))
+        const response = await this.client.get('search',{
+            params : {
+                part : 'snippet',
+                maxResults : 30,
+                type : 'video',
+                q : query,
+            }
+        });
+        return response.data.items.map(item => ({ ...item, id: item.id.videoId}))
     }
 }
 
